@@ -20,8 +20,6 @@ select distinct product_name from products;
 
 select count(*) as [Total_QTY] from sales;
 
---"planning Time: 0.098 ms"
---"Execution time: 136.423 ms"
 --explain analyze
 select * from sales where product_id = 'P-40';
 
@@ -30,8 +28,7 @@ create index sales_product_id on sales(product_id);
 
 select * from sales where product_id = 'P-40';
 --After creation of indexes query performance are increased to 
---"planning Time 0.118 ms"
---"Execution Time 6.324 ms"
+
 
 create index sales_store_id on sales(store_id);
 
